@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-step form</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <section class="application">
+      <picture class="app-bg">
+        <source
+          srcset="./assets/images/bg-sidebar-desktop.svg"
+          media="(min-width:800px)"
+        />
+        <img src="./assets/images/bg-sidebar-mobile.svg" alt="Card Image" />
+        <div class="app-steps">
+          <div class="step-1 step">
+            <p class="to-highlight1 step-highlight">1</p>
+            <div class="step-1-p step-hide">
+              <p>Step 1</p>
+              <p>Your info</p>
+            </div>
+          </div>
+          <div class="step-2 step">
+            <p class="to-highlight2">2</p>
+            <div class="step-2-p step-hide">
+              <p>Step 2</p>
+              <p>Select plan</p>
+            </div>
+          </div>
+          <div class="step-3 step">
+            <p class="to-highlight3">3</p>
+            <div class="step-3-p step-hide">
+              <p>Step 3</p>
+              <p>Add-ons</p>
+            </div>
+          </div>
+          <div class="step-4 step">
+            <p class="to-highlight4">4</p>
+            <div class="step-4-p step-hide">
+              <p>Step 4</p>
+              <p>Summary</p>
+            </div>
+          </div>
+        </div>
+      </picture>
+      <div class="steps-display">
+        <!-- step 1 -->
+        <div class="display1 display">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+
+          <div class="name-input input">
+            <div>
+              <p>Name</p>
+              <p class="error-p1 hidden">This field is required!</p>
+            </div>
+            <input
+              type="text"
+              name=""
+              id="#step1"
+              placeholder="e.g. Stephen King"
+            />
+          </div>
+          <div class="email-input input">
+            <div>
+              <p>Email</p>
+              <p class="error-p2 hidden">This field is required!</p>
+            </div>
+            <input
+              type="text"
+              name=""
+              id="#step2"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+          </div>
+          <div class="phone-input input">
+            <div>
+              <p>Phone</p>
+              <p class="error-p3 hidden">This field is required!</p>
+            </div>
+            <input
+              type="text"
+              name=""
+              id="#step3"
+              placeholder="e.g. +1 234 567 890"
+            />
+          </div>
+          <!-- <div class="slider translate-slider">
+          <p>Monthly</p>
+          <input type="checkbox" name="" id="switch" /><label
+            for="switch"
+            class="label"
+          ></label>
+          <p>Yearly</p>
+        </div> -->
+          <button class="next step-1-next">Next Step</button>
+        </div>
+        <!-- step 2 -->
+        <div class="display2 display">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing</p>
+          <div class="plan-flex">
+            <div class="arcade input-2">
+              <img src="./assets/images/icon-arcade.svg" alt="" />
+              <div class="arcade-text">
+                <p>Arcade</p>
+                <p class="step2-price-arcade">$9/mo</p>
+                <p class="months-display1 hidden">2 months free</p>
+              </div>
+            </div>
+            <div class="advanced input-2">
+              <img src="./assets/images/icon-advanced.svg" alt="" />
+              <div class="advanced-text">
+                <p>Advanced</p>
+                <p class="step2-price-advanced">$12/mo</p>
+                <p class="months-display2 hidden">2 months free</p>
+              </div>
+            </div>
+            <div class="pro input-2">
+              <img src="./assets/images/icon-pro.svg" alt="" />
+              <div class="pro-text">
+                <p>Pro</p>
+                <p class="step2-price-pro">$15/mo</p>
+                <p class="months-display3 hidden">2 months free</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider">
+            <p class="monthly-p year-month-p">Monthly</p>
+            <input type="checkbox" name="" id="switch" /><label
+              for="switch"
+              class="label"
+            ></label>
+            <p class="yearly-p">Yearly</p>
+          </div>
+          <div class="plan-buttons">
+            <button class="go-back go-back1">Go Back</button>
+            <button class="next2 go-next1">Next Step</button>
+          </div>
+        </div>
+        <!-- step 3 -->
+        <div class="display3 display">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+          <div class="checkbox-service input-3">
+            <input type="checkbox" name="checker1" id="" class="checkbox" />
+            <div class="service-text input3text">
+              <p>Online service</p>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p class="input-3-price1">+$1/mo</p>
+          </div>
+          <div class="checkbox-storage input-3">
+            <input type="checkbox" name="checker2" id="" class="checkbox" />
+            <div class="storage-text input3text">
+              <p>Larger storage</p>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p class="input-3-price2">+$2/mo</p>
+          </div>
+          <div class="checkbox-profile input-3">
+            <input type="checkbox" name="checker3" id="" class="checkbox" />
+            <div class="profile-text input3text">
+              <p>Customizable profile</p>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p class="input-3-price3">+$2/mo</p>
+          </div>
+
+          <div class="plan-buttons translate-3">
+            <button class="go-back go-back2">Go Back</button>
+            <button class="next2 go-next2">Next Step</button>
+          </div>
+        </div>
+        <div class="display4 display">
+          <!-- step 4 -->
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+          <div class="input-4">
+            <div>
+              <div class="input-4-plan">
+                <p class="finish-plan">Arcade (Monthly)</p>
+                <a href="#" class="change-plan">Change</a>
+              </div>
+              <p class="special-p">$9/mo</p>
+            </div>
+            <div class="input-4-service">
+              <p>Online service</p>
+              <p class="service-p">+$1/mo</p>
+            </div>
+            <div class="input-4-storage">
+              <p>Larger Storage</p>
+
+              <p class="storage-p">+$2/mo</p>
+            </div>
+            <div class="input-4-profile">
+              <p>Customizable profile</p>
+              <p class="profile-p">+$2/mo</p>
+            </div>
+            <div class="input-4-price">
+              <p class="total-p">Total (per month)</p>
+
+              <p class="totalPriceDisplay">+$12/mo</p>
+            </div>
+          </div>
+          <div class="plan-buttons translate-4">
+            <button class="go-back go-back3">Go Back</button>
+            <button class="next2 next4">Confirm</button>
+          </div>
+        </div>
+        <div class="display5 display">
+          <!-- step 5  -->
+          <div class="input-5">
+            <img src="./assets/images/icon-thank-you.svg" alt="" />
+            <h1>Thank you!</h1>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com
+            </p>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+    </section>
+  </body>
+</html>
